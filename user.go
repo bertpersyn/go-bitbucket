@@ -15,8 +15,7 @@ import (
 )
 
 type User struct {
-
-	Type_ string `json:"type"`
+	Type_ string `json:"type,omitempty"`
 
 	Links *AccountLinks `json:"links,omitempty"`
 
@@ -32,7 +31,7 @@ type User struct {
 
 	Website string `json:"website,omitempty"`
 
-	CreatedOn time.Time `json:"created_on,omitempty"`
+	CreatedOn *time.Time `json:"created_on,omitempty"`
 
 	Uuid string `json:"uuid,omitempty"`
 
