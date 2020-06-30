@@ -15,14 +15,13 @@ import (
 )
 
 type PullrequestComment struct {
-
-	Type_ string `json:"type"`
+	Type_ string `json:"type,omitempty"`
 
 	Id int32 `json:"id,omitempty"`
 
-	CreatedOn time.Time `json:"created_on,omitempty"`
+	CreatedOn *time.Time `json:"created_on,omitempty"`
 
-	UpdatedOn time.Time `json:"updated_on,omitempty"`
+	UpdatedOn *time.Time `json:"updated_on,omitempty"`
 
 	Content *IssueContent `json:"content,omitempty"`
 
